@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AirPrinter/AirPrinter.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AirPrinter.SelfTest/AirPrinter.SelfTest.csproj" />
+  </Folder>
+</Solution>

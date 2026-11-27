@@ -1,0 +1,24 @@
+# System service for a machine without a display.
+# APS_HEADLESS=1 is set so a stray DISPLAY value cannot open GTK.
+# cups and avahi are ordered first so mDNS exists before the process starts.
+[Unit]
+Description=APS for iOS (Headless)
+After=network-online.target cups.service avahi-daemon.service
+Wants=network-online.target cups.service avahi-daemon.service
+
+[Service]
+Type=simple
+User=aps
+Group=aps
+WorkingDirectory=/opt/aps
+Environment=APS_HEADLESS=1
+ExecStart=/opt/aps/aps-launcher --headless
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

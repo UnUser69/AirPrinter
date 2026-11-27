@@ -1,0 +1,2 @@
+# Headless mode uses the Python standard library only.
+# Do not add pywebview, PyGObject, or WebKit bindings here.

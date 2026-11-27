@@ -1,0 +1,10 @@
+bin/
+obj/
+dist/
+.vs/
+.cursor/
+__pycache__/
+*.user
+*.suo
+*.log
+*.pyc
